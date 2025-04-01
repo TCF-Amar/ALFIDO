@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfido Tech</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="bg-white shadow-md py-4 text-slate-800 font-medium fixed top-0 left-0 right-0 z-50 h-[70px]">
+        <div class=" mx-auto flex justify-between items-center px-6">
+            <div class="text-2xl font-bold transition-transform hover:scale-105 duration-300">
+                <img src="./assets/images/Logo 2.png" alt="Alfido Tech" class="h-10">
+            </div>
+
+            <!-- Mobile menu toggle button -->
+            <button type="button" id="mobile-menu-button"
+                class="lg:hidden focus:outline-none text-blue-700 cursor-pointer" aria-label="Toggle mobile menu">
+                <span id="bars">
+                    <i class="fas fa-bars text-xl"></i>
+                </span>
+                <span id="close" class="hidden">
+                    <i class="fas fa-times text-xl"></i>
+                </span>
+            </button>
+
+            <!-- Desktop Navigation Menu -->
+            <nav class="hidden lg:block">
+                <ul class="flex gap-6 transition-all duration-300">
+                    <li>
+                        <a href="/"
+                            class="nav-link active inline-block py-2 px-1 text-blue-700 font-medium relative after:content-[''] after:absolute after:w-full after:scale-x-100 after:h-0.5 after:bottom-0 after:left-0 after:bg-blue-600">Home</a>
+                    </li>
+                    <li>
+                        <a href="/"
+                            class="nav-link inline-block py-2 px-1 text-slate-700 hover:text-blue-700 transition-colors duration-300 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-blue-600 hover:after:scale-x-100 after:transition-transform after:duration-300">Services</a>
+                    </li>
+                    <li class="relative group">
+                        <span
+                            class="nav-link inline-block py-2 px-1 text-slate-700 hover:text-blue-700 cursor-pointer transition-colors duration-300 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-blue-600 group-hover:after:scale-x-100 after:transition-transform after:duration-300">
+                            Internship <i class="fas fa-chevron-down text-xs ml-1"></i>
+                        </span>
+                        <!-- Dropdown menu for internship options -->
+                        <div
+                            class="absolute left-0 w-64 bg-white rounded-md shadow-lg hidden group-hover:block transition-all duration-300 transform origin-top scale-0 group-hover:scale-100 z-10 border border-slate-100">
+                            <ul class="p-2">
+                                <li class="hover:bg-slate-200 rounded-md transition-all duration-300">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-slate-700 hover:text-blue-700">Internship
+                                        Registration</a>
+                                </li>
+                                <li class="hover:bg-slate-200 rounded-md transition-all duration-300">
+                                    <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:text-blue-700">Offer
+                                        Letter</a>
+                                </li>
+                                <li class="hover:bg-slate-200 rounded-md transition-all duration-300">
+                                    <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:text-blue-700">Task
+                                        Submission</a>
+                                </li>
+                                <li class="hover:bg-slate-200 rounded-md transition-all duration-300">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-slate-700 hover:text-blue-700">Certificate</a>
+                                </li>
+                                <li class="hover:bg-slate-200 rounded-md transition-all duration-300">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-slate-700 hover:text-blue-700">Intern
+                                        Profile</a>
+                                </li>
+                                <li class="hover:bg-slate-200 rounded-md transition-all duration-300">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-slate-700 hover:text-blue-700">Tasks</a>
+                                </li>
+                                <li class="hover:bg-slate-200 rounded-md transition-all duration-300">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-slate-700 hover:text-blue-700">Profile</a>
+                                </li>
+                                <li class="hover:bg-slate-200 rounded-md transition-all duration-300">
+                                    <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:text-blue-700">Code
+                                        Editor</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/"
+                            class="nav-link inline-block py-2 px-1 text-slate-700 hover:text-blue-700 transition-colors duration-300 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-blue-600 hover:after:scale-x-100 after:transition-transform after:duration-300">Contact
+                            Us</a>
+                    </li>
+                    <li>
+                        <a href="/"
+                            class="nav-link inline-block py-2 px-1 text-slate-700 hover:text-blue-700 transition-colors duration-300 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-blue-600 hover:after:scale-x-100 after:transition-transform after:duration-300">Certification</a>
+                    </li>
+                    <li>
+                        <a href="/"
+                            class="nav-link inline-block py-2 px-1 text-slate-700 hover:text-blue-700 transition-colors duration-300 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-blue-600 hover:after:scale-x-100 after:transition-transform after:duration-300">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu"
+            class="lg:hidden bg-white shadow-lg border-slate-100 translate-x-full transition-all duration-300  mt-4">
+            <div class="p-4">
+                <ul class="space-y-3">
+                    <li>
+                        <a href="/" class="block py-3 px-4 text-blue-700 bg-blue-50 rounded-md font-medium">Home</a>
+                    </li>
+                    <li>
+                        <a href="/"
+                            class="block py-3 px-4 text-slate-700 hover:text-blue-700 hover:bg-blue-50 rounded-md transition-all duration-200">Services</a>
+                    </li>
+                    <li class="relative">
+                        <div class="flex justify-between items-center cursor-pointer py-3 px-4 text-slate-700 hover:text-blue-700 hover:bg-blue-50 rounded-md transition-all duration-200"
+                            id="internship-dropdown-toggle">
+                            <span>Internship</span>
+                            <i class="fas fa-chevron-down text-sm"></i>
+                        </div>
+                        <div id="internship-dropdown"
+                            class="hidden bg-slate-50 p-3 my-1 rounded-md border border-slate-100 ml-2">
+                            <ul class="space-y-2">
+                                <li><a href="#"
+                                        class="block py-2 text-sm text-slate-700 hover:text-blue-700 hover:bg-blue-100 rounded px-3 transition-all duration-200">Internship
+                                        Registration</a></li>
+                                <li><a href="#"
+                                        class="block py-2 text-sm text-slate-700 hover:text-blue-700 hover:bg-blue-100 rounded px-3 transition-all duration-200">Offer
+                                        Letter</a></li>
+                                <li><a href="#"
+                                        class="block py-2 text-sm text-slate-700 hover:text-blue-700 hover:bg-blue-100 rounded px-3 transition-all duration-200">Task
+                                        Submission</a></li>
+                                <li><a href="#"
+                                        class="block py-2 text-sm text-slate-700 hover:text-blue-700 hover:bg-blue-100 rounded px-3 transition-all duration-200">Certificate</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block py-2 text-sm text-slate-700 hover:text-blue-700 hover:bg-blue-100 rounded px-3 transition-all duration-200">Intern
+                                        Profile</a></li>
+                                <li><a href="#"
+                                        class="block py-2 text-sm text-slate-700 hover:text-blue-700 hover:bg-blue-100 rounded px-3 transition-all duration-200">Tasks</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block py-2 text-sm text-slate-700 hover:text-blue-700 hover:bg-blue-100 rounded px-3 transition-all duration-200">Profile</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block py-2 text-sm text-slate-700 hover:text-blue-700 hover:bg-blue-100 rounded px-3 transition-all duration-200">Code
+                                        Editor</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="/"
+                            class="block py-3 px-4 text-slate-700 hover:text-blue-700 hover:bg-blue-50 rounded-md transition-all duration-200">Contact
+                            Us</a></li>
+                    <li><a href="/"
+                            class="block py-3 px-4 text-slate-700 hover:text-blue-700 hover:bg-blue-50 rounded-md transition-all duration-200">Certification</a>
+                    </li>
+                    <li><a href="/"
+                            class="block py-3 px-4 text-slate-700 hover:text-blue-700 hover:bg-blue-50 rounded-md transition-all duration-200">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="container mx-auto px-6 py-20 rounded-lg">
+        <!-- hero section -->
+        <section class="bg-gradient-to-br from-blue-50 to-indigo-50 py-14 rounded-lg animated-border">
+            <div class="relative mx-auto px-6">
+                <div class="flex items-center gap-2 absolute -top-10 left-5">
+                    <img src="./assets/images/Logo 2.png" alt="Alfido Tech" class="h-10 ">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="flex flex-col items-start justify-center space-y-6">
+                        <h1 class="text-5xl font-bold text-gray-900 leading-tight">
+                            Welcome to <span class="gradient-text ">Alfido Tech</span>
+                        </h1>
+                        <p id="tagline"
+                            class="text-sm font-semibold w-[80%] text-wrap text-gray-600 leading-relaxed h-[3rem] glow-effect">
+                        </p>
+
+                        <div class="flex gap-4">
+                            <a href="#"
+                                class="px-8 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-lg font-semibold hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover-scale">
+                                Get Started
+                            </a>
+                            <a href="#"
+                                class="px-8 py-3 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-indigo-50 transition-all duration-300 border-2 border-indigo-600 hover-scale">
+                                Learn More
+                            </a>
+                        </div>
+                        <div class="flex items-center gap-8 pt-4">
+                            <div class="flex flex-col stat-card p-4 rounded-lg">
+                                <span class="text-3xl font-bold gradient-text">1000+</span>
+                                <span class="text-gray-600">Clients</span>
+                            </div>
+
+                            <div class="flex flex-col stat-card p-4 rounded-lg">
+                                <span class="text-3xl font-bold gradient-text">95%</span>
+                                <span class="text-gray-600">Success Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-blue-100 rounded-full blur-3xl opacity-30"></div>
+                        <div class="relative">
+                            <img src="./assets/images/hero-image-1.png" alt="Alfido Tech"
+                                class="w-full h-full object-cover rounded-2xl shadow-2xl transform  transition-transform duration-500 hover-scale">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-xl hover-scale">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-graduation-cap text-blue-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-900">Expert Mentors</p>
+                                    <p class="text-xs text-gray-600">24/7 Support</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AICTE Approval Section -->
+        <section class="py-16 bg-white">
+            <div class=" mx-auto ">
+                <div class="flex flex-col items-center justify-center text-center space-y-8">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-blue-100 rounded-full blur-3xl opacity-30"></div>
+                        <div class="relative bg-white p-6 rounded-2xl shadow-xl hover-scale aicte-shine">
+                            <img src="./assets/images/aicte.png" alt="AICTE Logo" class="h-30 mx-auto mb-4">
+                            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                                <span class="gradient-text ">AICTE Approved</span> Internships
+                            </h2>
+                            <p class="text-gray-600 max-w-2xl mx-auto">
+                                Our internship programs are officially approved by the All India Council for Technical
+                                Education (AICTE), ensuring quality education and industry-relevant training.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+                        <div class="bg-white p-6 rounded-xl shadow-lg hover-scale border border-blue-100 aicte-card">
+                            <div
+                                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 aicte-icon">
+                                <i class="fas fa-certificate text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Certified Programs</h3>
+                            <p class="text-gray-600">Industry-recognized certifications that add value to your resume
+                            </p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-xl shadow-lg hover-scale border border-blue-100 aicte-card">
+                            <div
+                                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 aicte-icon">
+                                <i class="fas fa-graduation-cap text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Quality Education</h3>
+                            <p class="text-gray-600">Structured curriculum following AICTE guidelines and standards</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-xl shadow-lg hover-scale border border-blue-100 aicte-card">
+                            <div
+                                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 aicte-icon">
+                                <i class="fas fa-building text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Industry Connect</h3>
+                            <p class="text-gray-600">Direct exposure to real-world projects and industry experts</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Internship Domains Section -->
+        <section class="py-16 bg-gradient-to-b  ">
+            <div class=" mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                        <span class="gradient-text ">Explore Our Internship Domains</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Apply now to kickstart your tech career with hands-on experience!
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Frontend Developer Card -->
+                    <div class="internship-card frontend-card rounded-xl shadow-lg overflow-hidden hover-scale">
+                        <div class="p-6">
+                            <div
+                                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4 internship-icon">
+                                <i class="fas fa-code text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Frontend Developer Intern</h3>
+                            <p class="text-gray-600 mb-4">Join Alfido Tech as a Frontend Developer Intern! Kickstart
+                                your web development career with hands-on experience in building responsive,
+                                user-friendly interfaces using HTML, CSS, and JavaScript.</p>
+                            <a href="#"
+                                class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold">
+                                Learn More <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Android Developer Card -->
+                    <div class="internship-card android-card rounded-xl shadow-lg overflow-hidden hover-scale">
+                        <div class="p-6">
+                            <div
+                                class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4 internship-icon">
+                                <i class="fab fa-android text-green-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Android Developer Intern</h3>
+                            <p class="text-gray-600 mb-4">Join Alfido Tech as an Android Developer Intern and jumpstart
+                                your career in mobile app development! This internship provides hands-on experience in
+                                creating innovative Android applications.</p>
+                            <a href="#"
+                                class="inline-flex items-center text-green-600 hover:text-green-700 font-semibold">
+                                Learn More <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- React.js Card -->
+                    <div class="internship-card react-card rounded-xl shadow-lg overflow-hidden hover-scale">
+                        <div class="p-6">
+                            <div
+                                class="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center mb-4 internship-icon">
+                                <i class="fab fa-react text-cyan-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">React.js Intern</h3>
+                            <p class="text-gray-600 mb-4">Join Alfido Tech as a React.js Developer Intern and take your
+                                first step into the world of web development! This internship provides hands-on
+                                experience in building dynamic user interfaces.</p>
+                            <a href="#"
+                                class="inline-flex items-center text-cyan-600 hover:text-cyan-700 font-semibold">
+                                Learn More <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Java Developer Card -->
+                    <div class="internship-card java-card rounded-xl shadow-lg overflow-hidden hover-scale">
+                        <div class="p-6">
+                            <div
+                                class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4 internship-icon">
+                                <i class="fab fa-java text-red-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Java Developer Intern</h3>
+                            <p class="text-gray-600 mb-4">Join Alfido Tech as a Java Developer Intern and kickstart your
+                                journey in software development! This internship offers hands-on experience in building
+                                robust Java applications.</p>
+                            <a href="#" class="inline-flex items-center text-red-600 hover:text-red-700 font-semibold">
+                                Learn More <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Python Developer Card -->
+                    <div class="internship-card python-card rounded-xl shadow-lg overflow-hidden hover-scale">
+                        <div class="p-6">
+                            <div
+                                class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-4 internship-icon">
+                                <i class="fab fa-python text-yellow-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Python Developer Intern</h3>
+                            <p class="text-gray-600 mb-4">Join Alfido Tech as a Python Developer Intern and kickstart
+                                your career in tech! This internship offers hands-on experience in developing Python
+                                applications.</p>
+                            <a href="#"
+                                class="inline-flex items-center text-yellow-600 hover:text-yellow-700 font-semibold">
+                                Learn More <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Data Analyst Card -->
+                    <div class="internship-card data-analyst-card rounded-xl shadow-lg overflow-hidden hover-scale">
+                        <div class="p-6">
+                            <div
+                                class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4 internship-icon">
+                                <i class="fas fa-chart-bar text-purple-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Data Analyst Intern</h3>
+                            <p class="text-gray-600 mb-4">Join Alfido Tech as a Data Analyst Intern and take your first
+                                step into the world of data analysis! This internship provides the opportunity to work
+                                with real data.</p>
+                            <a href="#"
+                                class="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold">
+                                Learn More <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Data Science Card -->
+                    <div class="internship-card data-science-card rounded-xl shadow-lg overflow-hidden hover-scale">
+                        <div class="p-6">
+                            <div
+                                class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4 internship-icon">
+                                <i class="fas fa-brain text-indigo-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Data Science Intern</h3>
+                            <p class="text-gray-600 mb-4">Join Alfido Tech as a Data Science Intern and launch your
+                                career in the dynamic field of data Science! This internship provides hands-on
+                                experience in analyzing data.</p>
+                            <a href="#"
+                                class="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-semibold">
+                                Learn More <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- .NET Developer Card -->
+                    <div class="internship-card dotnet-card rounded-xl shadow-lg overflow-hidden hover-scale">
+                        <div class="p-6">
+                            <div
+                                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4 internship-icon">
+                                <i class="fab fa-microsoft text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">.NET Developer Intern</h3>
+                            <p class="text-gray-600 mb-4">Join Alfido Tech as a .NET Developer and advance your career
+                                in software development! This role offers an opportunity to work on cutting-edge
+                                applications.</p>
+                            <a href="#"
+                                class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold">
+                                Learn More <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- UX/UI Design Card -->
+                    <div class="internship-card uxui-card rounded-xl shadow-lg overflow-hidden hover-scale">
+                        <div class="p-6">
+                            <div
+                                class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mb-4 internship-icon">
+                                <i class="fas fa-paint-brush text-pink-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">UX/UI Design Intern</h3>
+                            <p class="text-gray-600 mb-4">Join Alfido Tech as a UX/UI Design Intern and take the first
+                                step in your design career! This internship provides hands-on experience in creating
+                                user-centered designs.</p>
+                            <a href="#"
+                                class="inline-flex items-center text-pink-600 hover:text-pink-700 font-semibold">
+                                Learn More <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-16 bg-gradient-to-b ">
+            <div class=" mx-auto ">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                        <span class="gradient-text ">Discover Our Range of Services</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Start your journey today and gain practical experience in the tech world!
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Auto Google Ads Clicker -->
+                    <div class="service-card ads-card rounded-xl shadow-lg overflow-hidden hover-scale">
+                        <div class="p-6">
+                            <div
+                                class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4 service-icon">
+                                <i class="fas fa-robot text-orange-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Auto Google Ads Clicker Automation</h3>
+                            <p class="text-gray-600 mb-4">Automate ad clicks and maximize your ROI efficiently with our
+                                advanced automation solutions.</p>
+                            <a href="#"
+                                class="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold">
+                                Learn More <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Design & Development -->
+                    <div class="service-card design-card rounded-xl shadow-lg overflow-hidden hover-scale">
+                        <div class="p-6">
+                            <div
+                                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4 service-icon">
+                                <i class="fas fa-paint-brush text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Design & Development Services</h3>
+                            <p class="text-gray-600 mb-4">Custom website and app design tailored to your business needs
+                                with modern solutions.</p>
+                            <a href="#"
+                                class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold">
+                                Learn More <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- SEO Optimization -->
+                    <div class="service-card seo-card rounded-xl shadow-lg overflow-hidden hover-scale">
+                        <div class="p-6">
+                            <div
+                                class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4 service-icon">
+                                <i class="fas fa-search text-green-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">SEO Optimization Services</h3>
+                            <p class="text-gray-600 mb-4">Enhance your website's visibility with proven SEO techniques
+                                and strategies.</p>
+                            <a href="#"
+                                class="inline-flex items-center text-green-600 hover:text-green-700 font-semibold">
+                                Learn More <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Logo Maker -->
+                    <div class="service-card logo-card rounded-xl shadow-lg overflow-hidden hover-scale">
+                        <div class="p-6">
+                            <div
+                                class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4 service-icon">
+                                <i class="fas fa-palette text-purple-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Logo Maker Service</h3>
+                            <p class="text-gray-600 mb-4">Create professional logos tailored to your brand identity with
+                                our expert design team.</p>
+                            <a href="#"
+                                class="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold">
+                                Learn More <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Email Marketing -->
+                    <div class="service-card email-card rounded-xl shadow-lg overflow-hidden hover-scale">
+                        <div class="p-6">
+                            <div
+                                class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4 service-icon">
+                                <i class="fas fa-envelope text-red-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Email Marketing Service</h3>
+                            <p class="text-gray-600 mb-4">Engage and convert leads with effective email campaigns and
+                                marketing strategies.</p>
+                            <a href="#" class="inline-flex items-center text-red-600 hover:text-red-700 font-semibold">
+                                Learn More <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Marketing -->
+                    <div class="service-card social-card rounded-xl shadow-lg overflow-hidden hover-scale">
+                        <div class="p-6">
+                            <div
+                                class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mb-4 service-icon">
+                                <i class="fas fa-share-alt text-pink-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Social Media Marketing Service</h3>
+                            <p class="text-gray-600 mb-4">Grow your online presence with expert marketing strategies and
+                                social media management.</p>
+                            <a href="#"
+                                class="inline-flex items-center text-pink-600 hover:text-pink-700 font-semibold">
+                                Learn More <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="py-12 md:py-20 bg-gradient-to-b  relative overflow-hidden">
+            <!-- Background decorative elements -->
+
+            <div
+                class="absolute top-[50%] left-[40%] w-72 h-72 bg-indigo-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob">
+            </div>
+            <div class=" mx-auto px-4 md:px-6 relative">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- About Content and Stats -->
+                    <div class="space-y-10">
+                        <!-- About Content -->
+                        <div class="space-y-6">
+                            <div class="inline-block">
+                                <span
+                                    class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">About
+                                    Us</span>
+                            </div>
+                            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                                Empowering Digital Solutions with <span class="gradient-text">5+ Years</span> of
+                                Expertise
+                            </h2>
+                            <p class="text-gray-600 leading-relaxed text-base md:text-lg">
+                                In today's fast-paced digital landscape, experience fuels innovation. At Alfido Tech, we
+                                bring over five years of dedicated expertise to the forefront of digital transformation.
+                                Our tailored solutions are designed to empower businesses, entrepreneurs, and
+                                organizations,
+                                helping you achieve greater operational efficiency and accelerate growth.
+                            </p>
+                        </div>
+
+                        <!-- Skills Stats -->
+                        <div class="grid grid-cols-1 gap-6">
+                            <div class="    ">
+                                <div class="flex justify-between items-center mb-3">
+                                    <h4 class="text-lg font-semibold text-gray-900">IT Services</h4>
+                                    <span class="text-blue-600 font-bold text-xl">75%</span>
+                                </div>
+                                <div class="w-full bg-gray-100 rounded-full h-3">
+                                    <div class="bg-gradient-to-r from-blue-600 to-indigo-600 h-3 rounded-full progress-bar"
+                                        style="width: 75%"></div>
+                                </div>
+                            </div>
+
+                            <div class="    ">
+                                <div class="flex justify-between items-center mb-3">
+                                    <h4 class="text-lg font-semibold text-gray-900">Business Consulting</h4>
+                                    <span class="text-green-600 font-bold text-xl">60%</span>
+                                </div>
+                                <div class="w-full bg-gray-100 rounded-full h-3">
+                                    <div class="bg-gradient-to-r from-green-600 to-emerald-600 h-3 rounded-full progress-bar"
+                                        style="width: 60%"></div>
+                                </div>
+                            </div>
+
+                            <div class="   ">
+                                <div class="flex justify-between items-center mb-3">
+                                    <h4 class="text-lg font-semibold text-gray-900">Design & Development</h4>
+                                    <span class="text-purple-600 font-bold text-xl">95%</span>
+                                </div>
+                                <div class="w-full bg-gray-100 rounded-full h-3">
+                                    <div class="bg-gradient-to-r from-purple-600 to-indigo-600 h-3 rounded-full progress-bar"
+                                        style="width: 95%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- About Image -->
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-blue-100 rounded-full blur-3xl opacity-30"></div>
+                        <div
+                            class="relative rounded-2xl overflow-hidden shadow-2xl hover-scale transform transition-all duration-500">
+                            <img src="./assets/images/alfido Tech.webp" alt="Alfido Tech Team"
+                                class="w-full h-[400px] object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                <h3 class="text-xl font-semibold mb-2">Our Team</h3>
+                                <p class="text-sm opacity-90">Dedicated professionals committed to your success</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="py-16  relative overflow-hidden">
+            <!-- Background decorative elements -->
+
+
+            <div class=" mx-auto px-4 md:px-6 relative">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Years Experience -->
+                    <div
+                        class="stat-card bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-gray-100 text-center">
+                        <div
+                            class="icon-container w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-calendar-alt text-blue-600 text-2xl"></i>
+                        </div>
+                        <div class="text-4xl font-bold text-gray-900 mb-2">
+                            <span class="counter" data-target="5">0</span>
+                            <span class="text-blue-600">+</span>
+                        </div>
+                        <p class="text-gray-600 font-medium">Years Experience</p>
+                    </div>
+
+                    <!-- Team Members -->
+                    <div
+                        class="stat-card bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-gray-100 text-center">
+                        <div
+                            class="icon-container w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-users text-green-600 text-2xl"></i>
+                        </div>
+                        <div class="text-4xl font-bold text-gray-900 mb-2">
+                            <span class="counter" data-target="19">0</span>
+                            <span class="text-green-600">+</span>
+                        </div>
+                        <p class="text-gray-600 font-medium">Team Members</p>
+                    </div>
+
+                    <!-- Satisfied Clients -->
+                    <div
+                        class="stat-card bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-gray-100 text-center">
+                        <div
+                            class="icon-container w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-smile text-purple-600 text-2xl"></i>
+                        </div>
+                        <div class="text-4xl font-bold text-gray-900 mb-2">
+                            <span class="counter" data-target="1901">0</span>
+                            <span class="text-purple-600">+</span>
+                        </div>
+                        <p class="text-gray-600 font-medium">Satisfied Clients</p>
+                    </div>
+
+                    <!-- Completed Projects -->
+                    <div
+                        class="stat-card bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-gray-100 text-center">
+                        <div
+                            class="icon-container w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-project-diagram text-orange-600 text-2xl"></i>
+                        </div>
+                        <div class="text-4xl font-bold text-gray-900 mb-2">
+                            <span class="counter" data-target="1965">0</span>
+                            <span class="text-orange-600">+</span>
+                        </div>
+                        <p class="text-gray-600 font-medium">Completed Projects</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    <!-- WhatsApp Chat Button -->
+    <div class="fixed bottom-4 right-4 z-50">
+        <a href="https://api.whatsapp.com/send?phone=919977465250" target="_blank" rel="noopener noreferrer"
+            aria-label="Chat on WhatsApp">
+            <div class="bg-white p-3 rounded-full shadow-lg">
+                <img src="./assets/images/whatsapp.png" alt="WhatsApp"
+                    class="w-8 h-8 lg:w-10 lg:h-10 transition-transform transform hover:scale-110">
+            </div>
+        </a>
+    </div>
+    <!-- Footer section -->
+    <footer
+        class="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-950 text-white pb-6 pt-10 mt-4 relative overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-10 left-10 w-64 h-64 rounded-full bg-blue-500/5 blur-3xl animate-blob"></div>
+            <div
+                class="absolute bottom-10 right-10 w-64 h-64 rounded-full bg-purple-500/5 blur-3xl animate-blob animation-delay-2000">
+            </div>
+            <div
+                class="absolute top-1/2 left-1/2 w-64 h-64 rounded-full bg-indigo-500/5 blur-3xl animate-blob animation-delay-4000">
+            </div>
+        </div>
+
+
+        <!-- Main footer content -->
+        <div class=" mx-auto px-4 md:px-6 relative z-10">
+            <!-- Footer grid layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Company Info Section -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <img src="./assets/images/Logo 2.png" alt="Alfido Tech bg-gray"
+                            class="h-10 rounded bg-gray-100 p-1">
+
+                    </div>
+                    <div class="w-[300px] md:w-16 h-1 bg-gradient-to-r from-blue-500 to-indigo-500"></div>
+                    <p class="text-slate-300 text-sm leading-relaxed">Alfido Tech offers digital solutions in custom
+                        software
+                        development, social media marketing, SEO, and Google Ads optimization to boost online presence
+                        and engagement.</p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-blue-500 transition-all duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-black transition-all duration-300">
+                            <i class="fab fa-x"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-blue-700 transition-all duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 transition-all duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Products Section -->
+                <div class="space-y-4">
+                    <h3
+                        class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
+                        Products</h3>
+                    <div class="w-[300px] md:w-16 h-1 bg-gradient-to-r from-indigo-500 to-purple-500"></div>
+                    <ul class="space-y-3">
+                        <li class="group">
+                            <a href="#"
+                                class="text-slate-300 group-hover:text-white transition-colors duration-200 text-sm flex items-center">
+                                <i
+                                    class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                Design & Development
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="text-slate-300 group-hover:text-white transition-colors duration-200 text-sm flex items-center">
+                                <i
+                                    class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                Social Media Marketing
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="text-slate-300 group-hover:text-white transition-colors duration-200 text-sm flex items-center">
+                                <i
+                                    class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                SEO Optimization
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="text-slate-300 group-hover:text-white transition-colors duration-200 text-sm flex items-center">
+                                <i
+                                    class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                Google Ads Management
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Useful Links Section -->
+                <div class="space-y-4">
+                    <h3
+                        class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                        Useful Links</h3>
+                    <div class="w-[300px] md:w-16 h-1 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                    <ul class="space-y-3">
+                        <li class="group">
+                            <a href="#"
+                                class="text-slate-300 group-hover:text-white transition-colors duration-200 text-sm flex items-center">
+                                <i
+                                    class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                Home
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="text-slate-300 group-hover:text-white transition-colors duration-200 text-sm flex items-center">
+                                <i
+                                    class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                About Us
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="text-slate-300 group-hover:text-white transition-colors duration-200 text-sm flex items-center">
+                                <i
+                                    class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                Services
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="text-slate-300 group-hover:text-white transition-colors duration-200 text-sm flex items-center">
+                                <i
+                                    class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                Terms of Service
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="text-slate-300 group-hover:text-white transition-colors duration-200 text-sm flex items-center">
+                                <i
+                                    class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                Privacy Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="space-y-4">
+                    <h3
+                        class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-red-400">
+                        Contact</h3>
+                    <div class="w-[300px] md:w-16 h-1 bg-gradient-to-r from-pink-500 to-red-500"></div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3 group">
+                            <div
+                                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-blue-500 transition-all duration-300">
+                                <i class="fas fa-map-marker-alt text-pink-400 group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-white/90">Address</h4>
+                                <span
+                                    class="text-slate-300 text-sm group-hover:text-white transition-colors duration-300">Bhopal,
+                                    Madhya Pradesh</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center space-x-3 group">
+                            <div
+                                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-blue-500 transition-all duration-300">
+                                <i class="fas fa-envelope text-pink-400 group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-white/90">Email</h4>
+                                <span
+                                    class="text-slate-300 text-sm group-hover:text-white transition-colors duration-300">info@alfidotech.com</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center space-x-3 group">
+                            <div
+                                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-blue-500 transition-all duration-300">
+                                <i class="fas fa-phone-alt text-pink-400 group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-white/90">Phone</h4>
+                                <span
+                                    class="text-slate-300 text-sm group-hover:text-white transition-colors duration-300">+91
+                                    9977465250</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright and legal links -->
+            <div class="pt-6 border-t border-slate-800">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-slate-400 text-sm">&copy;2019 - 2025 Alfido Tech. All rights reserved.</p>
+                    <div class="flex gap-6">
+                        <a href="#"
+                            class="text-slate-400 hover:text-white transition-colors duration-300 text-sm">Privacy
+                            Policy</a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors duration-300 text-sm">Terms
+                            of Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="script.jquery.js"></script>
+<script src="typewriter.js"></script>
+
+</html>
